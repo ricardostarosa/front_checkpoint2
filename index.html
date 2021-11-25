@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        
+        fieldset{
+
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        body{
+
+            background: url(./img/bgform.png) ;
+        }
+
+        .conteudo-form{
+
+            width: 700px;
+            padding: 40px 0px;
+            background-color: rgb(233, 255, 255);
+            border-radius: 40px;
+            margin: 0 auto;
+          
+        }
+
+        fieldset{
+
+            border: 0.3px solid rgb(73, 73, 73);
+            padding: 30px;
+            margin-bottom: 10px;
+        }
+        #nome{
+
+           margin-bottom: 5px;
+            transition: margin-bottom 1s;
+        }
+
+        #nome:focus{
+
+
+            outline: none;
+            border: none;
+            border-bottom: 1px solid black;
+            margin-bottom: 15px;
+
+        }
+
+      
+     
+       
+    </style>
+    <title>Formulário</title>
+</head>
+<body>
+
+  
+    <div class="conteudo-form">
+
+        <form action="" method="post">
+            <fieldset>
+                <legend>Dados Pessoais:</legend>
+                <div class="nome">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Digite o seu nome." maxlength="100"> 
+                </div>
+
+                <div class="email">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Ex: meu_nome@email.com.br "> 
+                </div>
+
+                <div class="telefone">
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" name="telefone" placeholder="(xx)xxxxx-xxxx"> 
+                </div>
+
+                <div class="data-nasc">
+                    <label for="data-nasc">Data Nascimento:</label>
+                    <input type="date" id="data-nasc" name="data-nasc" required> 
+                </div>
+
+                <div class="maior-idade">
+                    <input type="radio" id="maior-idade" name="maior-idade" value="maior-idade">
+                    <label for="maior-idade">Maior de idade</label> 
+                </div>
+
+                <div class="menor-idade">
+                    <input type="radio" id="menor-idade" name="maior-idade" value="menor-idade">
+                    <label for="menor-idade">Menor de idade</label> 
+                </div>
+             </fieldset>
+
+             <fieldset>
+                <legend>Interesses:</legend>
+                
+                <div class="selecao-interesses">
+                    <label for="nome">Interesses Turísticos</label>
+                    <select name="selecao-interesses" id="selecao-interesses">
+                        <optgroup label="Centro-Histórico">
+                            <option value="">Cruz caída</option>
+                            <option value="">Pelourinho</option>
+                            <option value="">Praça Tereza Batista</option>
+                        </optgroup>
+
+                        <optgroup label="Circuitos do Carnaval" >
+                            <option value="">Barra-Ondina(Dodô)</option>
+                            <option value="">Pelourinho(Batatinha)</option>
+                            <option value="">Centro(Osmar)</option>
+                        </optgroup>
+                    </select> 
+
+                    <p class="interesses-pessoais">Interesses Pessoais:</p>
+
+                    <div class="interesses-pessoais">
+                        <input type="checkbox" id="residencia" name="residencia" value="residencia">
+                        <label for="residencia">Turismo</label> 
+                    </div>
+
+                    <div class="interesses-pessoais">
+                        <input type="checkbox" id="residencia" name="residencia" value="residencia">
+                        <label for="residencia">Residência</label> 
+                    </div>
+
+                    <div class="interesses-pessoais">
+                        <input type="checkbox" id="residencia" name="residencia" value="residencia">
+                        <label for="residencia">Estudo</label> 
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+            <fieldset >
+
+                <div class="enviar-resetar">
+
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Resetar</button>
+
+                </div>
+
+            </fieldset>
+
+        </form>
+
+    </div>
+    
+</body>
+</html>
