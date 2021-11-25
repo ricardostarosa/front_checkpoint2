@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Kanit&family=Montserrat&family=Patrick+Hand&family=Road+Rage&family=Roboto+Condensed:ital@0;1&display=swap" rel="stylesheet">
+    
     <style>
 
             /* Componentes : Digite seu nome aqui para saber se o repositório está funcionando. */
         
-        fieldset{
-
-            width: 70%;
-            margin: 0 auto;
+        *{
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        legend{
+            font-weight: bold;
         }
 
         body{
@@ -20,20 +23,22 @@
         }
 
         .conteudo-form{
-
-            width: 700px;
+            width: 400px;
             padding: 40px 0px;
-            background-color: rgb(233, 255, 255);
+            background-color: rgb(255, 255, 255);
             border-radius: 40px;
             margin: 0 auto;
+            position: relative;
           
         }
 
         fieldset{
-
+            width: 70%;
+            margin: 0 auto;
             border: 0.3px solid rgb(73, 73, 73);
             padding: 30px;
             margin-bottom: 10px;
+            border-radius: 25px;
         }
         #nome{
 
@@ -42,8 +47,6 @@
         }
 
         #nome:focus{
-
-
             outline: none;
             border: none;
             border-bottom: 1px solid black;
@@ -51,15 +54,32 @@
 
         }
 
-      
-     
-       
+        .botoes{
+            margin: 0px auto;
+            text-align: center;
+            width: 300px;            
+        }
+
+        .submit{
+            text-decoration-line: none;
+            padding: 10px 30px;
+            background-color: blue;
+            border-radius: 20px;
+            color: white;
+        }
+
+        .reset{
+            text-decoration-line: none;
+            padding: 10px 30px;
+            background-color: blue;
+            border-radius: 20px;
+            color: white;
+        }
+            
     </style>
     <title>Formulário</title>
 </head>
 <body>
-
-  
     <div class="conteudo-form">
 
         <form action="" method="post">
@@ -134,21 +154,14 @@
 
                 </div>
 
-            </fieldset>
+            </fieldset>          
 
-            <fieldset >
-
-                <div class="enviar-resetar">
-
-                    <button type="submit">Enviar</button>
-                    <button type="reset">Resetar</button>
-
-                </div>
-
-            </fieldset>
+        <div class="botoes">
+            <button class="reset" type="reset">Resetar</button>
+            <button class="submit" type="submit">Enviar</button>
+        </div>
 
         </form>
-
     </div>
     
 </body>
