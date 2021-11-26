@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Kanit&family=Montserrat&family=Patrick+Hand&family=Road+Rage&family=Roboto+Condensed:ital@0;1&display=swap" rel="stylesheet">
+    
     <style>
 
             /* Componentes : Digite seu nome aqui para saber se o repositório está funcionando. */
         
-        fieldset{
-
-            width: 70%;
-            margin: 0 auto;
+        *{
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        legend{
+            font-weight: bold;
         }
 
         body{
@@ -20,20 +23,21 @@
         }
 
         .conteudo-form{
-
-            width: 700px;
+            width: 400px;
             padding: 40px 0px;
-            background-color: rgb(233, 255, 255);
+            background-color: rgb(255, 255, 255);
             border-radius: 40px;
             margin: 0 auto;
-          
+            position: relative;
         }
 
         fieldset{
-
+            width: 70%;
+            margin: 0 auto;
             border: 0.3px solid rgb(73, 73, 73);
             padding: 30px;
             margin-bottom: 10px;
+            border-radius: 25px;
         }
         #nome{
 
@@ -42,8 +46,6 @@
         }
 
         #nome:focus{
-
-
             outline: none;
             border: none;
             border-bottom: 1px solid black;
@@ -51,18 +53,248 @@
 
         }
 
-      
-     
+        .botoes{
+            margin: 0px auto;
+            text-align: center;
+            width: 230px;   
+            left: 0px;
+            right: 0px;
+            position: absolute;
+            bottom: -30px;
+            background-color: white;
+            border-color: gray;
+            border-style: solid;         
+            border-width: 1px;
+            border-radius: 35px;
+            padding: 10px;
+        }
+
+        .submit{
+            text-decoration-line: none;
+            padding: 10px 30px;
+            background-color: lightgray;
+            border-radius: 20px;
+            color: black;
+            transition:
+                background-color, 0.5s,
+                color, 0.5s;
+
+        }
+
+        .submit:hover{
+            background-color: lightblue;
+            color: white;
+        }
+
+        //.reset{
+            text-decoration-line: none;
+            padding: 10px 30px;
+            background-color: blue;
+            border-radius: 20px;
+            color: white;
+        }
+
+        .reset{
+            text-decoration-line: none;
+            padding: 10px 30px;
+            background-color: blue;
+            border-radius: 20px;
+            color: white;
+        }
+
+
+        .cidade {
+            display: flex;
+            margin-left: 0px ;
+            margin-bottom: 0px;
+            margin-top: 0px;
+            line-height: 30px;
+            font-size: 30pt;
+        }
+
+        .s {
+        width: 30px;
+        color:  red;
+        font-size: 35pt;
+        text-shadow: 0.1em 0.1em rgba(212, 10, 20, 0.452); /*(EFEITO DE SOMBRA)*/
+        /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
+        /*text-shadow: -1px 0 blue, 0 1px purple,
+            1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
+        animation: fadeInfadeOut 8s linear infinite;
+        animation: fadeInfadeOut 2s ease infinite;
+        }
+
+        @keyframes fadeInfadeOut {
+            0% {opacity: 1;}
+            50%{ opacity: 0.2;}
+            100% { opacity: 1;}
+        }
+
+
+        .a{
+        color:  blue;
+        width: 30px;
+        text-shadow: 0.1em 0.1em rgba(10, 47, 212, 0.575); /*(EFEITO DE SOMBRA)*/
+        /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
+        /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
+        animation: fadeInfadeOut 8s linear infinite;
+        animation: fadeInfadeOut 2s ease infinite;
+
+        }
+
+        @keyframes fadeInfadeOut {
+        0% {opacity: 1;}
+            50%{ opacity: 0.2;}
+            100% { opacity: 1;}
+        }
+        .l{
+        color:  green;
+        
+        text-shadow: 0.1em 0.1em rgba(10, 212, 77, 0.602); /*(EFEITO DE SOMBRA)*/
+        /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
+        /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
+        animation: fadeInfadeOut 8s linear infinite;
+        animation: fadeInfadeOut 2s ease infinite; 
+        }
+
+        @keyframes fadeInfadeOut{
+        0% {opacity: 1;}
+            50%{ opacity: 0.2;}
+            100% { opacity: 1;}
+        }
+
+        .v{
+        color:  yellow;
+    
+        text-shadow: 0.1em 0.1em rgba(236, 224, 92, 0.64); /*(EFEITO DE SOMBRA)*/
+        /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
+        /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
+        animation: fadeInfadeOut 8s linear infinite;
+        animation: fadeInfadeOut 2s ease infinite; 
+        }
+
+        @keyframes fadeInfadeOut{
+        0% {opacity: 1;}
+            50%{ opacity: 0.2;}
+            100% { opacity: 1;}
+        }
+
+
+        .a2{
+        color:  blue;
+        font-family: 'Bebas Neue', cursive;
+        text-shadow: 0.1em 0.1em rgba(10, 57, 212, 0.602); /*(EFEITO DE SOMBRA)*/
+        /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
+        /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
+        animation: fadeInfadeOut 8s linear infinite;
+        animation: fadeInfadeOut 2s ease infinite; 
+
+        }
+
+        @keyframes fadeInfadeOut {
+        0% {opacity: 1;}
+            50%{ opacity: 0.2;}
+            100% { opacity: 1;}
+        }
+        .d{
+        color: red;
        
+        text-shadow: 0.1em 0.1em rgba(212, 10, 87, 0.554); /*(EFEITO DE SOMBRA)*/
+        /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
+        /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
+        animation: fadeInfadeOut 8s linear infinite;
+        animation: fadeInfadeOut 2s ease infinite; 
+        }
+
+        @keyframes fadeInfadeOut {
+        0% {opacity: 1;}
+            50%{ opacity: 0.2;}
+            100% { opacity: 1;}
+        }
+        .o{
+        color: yellow;
+        
+        text-shadow: 0.1em 0.1em rgba(223, 221, 98, 0.527); /*(EFEITO DE SOMBRA)*/
+        /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
+        /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
+        animation: fadeInfadeOut 8s linear infinite;
+        animation: fadeInfadeOut 2s ease infinite; 
+        }
+
+        @keyframes fadeInfadeOut {
+        0% {opacity: 1;}
+            50%{ opacity: 0.2;}
+            100% { opacity: 1;}
+        }
+
+        .r{
+        color: purple;
+        
+        text-shadow: 0.1em 0.1em rgba(195, 10, 212, 0.657); /*(EFEITO DE SOMBRA)*/
+        /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
+        /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
+        animation: fadeInfadeOut 8s linear infinite;
+        animation: fadeInfadeOut 2s ease infinite; 
+        }
+
+        @keyframes fadeInfadeOut{
+        0% {opacity: 2;}
+            50%{ opacity: 0.2;}
+            100% { opacity: 1;}
+        }
+
+
+        
+        .img:hover{
+            animation-play-state: paused;
+        
+
+        .img  {
+
+            margin-top: 560px;
+            margin-bottom: 440px;
+            margin-left: 45px;
+            margin-right: 400px;
+            width: 50px;
+            height: 50px;
+            vertical-align: top;
+            position: absolute;
+            animation: position 4s linear infinite;
+            animation-direction: alternate;
+
+        }
+        @keyframes position{
+            0% {top: 0;
+                left: 0;}
+            100%{top: 0;
+                left: calc(100% - 100px);}
+                /*
+            50% { top: calc(100% - 100px);
+                left: calc(100% - 100px);}
+                85% { top: calc(100% - 100px);
+                left: 0;}
+                100% { top: 0;
+                left: 0;}*/
+            }
+            
     </style>
     <title>Formulário</title>
 </head>
 <body>
-
-  
     <div class="conteudo-form">
 
         <form action="" method="post">
+            <div class="cidade">
+                <div class="s">S</div>
+                <div class="a">A</div>
+                <div class="l">L</div>
+                <div class="v">V</div>
+                <div class="a2">A</div>
+                <div class="d">D</div>
+                <div class="o">O</div>
+                <div class="r">R</div>
+                <img class="img" src="https://images.vexels.com/media/users/3/200384/isolated/preview/ac67c61b8003479587fa794f8f88d463-carnaval-carrinho-de-sorvete-cor.png" alt="carrinho">
+            </div>
             <fieldset>
                 <legend>Dados Pessoais:</legend>
                 <div class="nome">
@@ -134,21 +366,15 @@
 
                 </div>
 
-            </fieldset>
+            </fieldset>          
 
-            <fieldset >
-
-                <div class="enviar-resetar">
-
-                    <button type="submit">Enviar</button>
-                    <button type="reset">Resetar</button>
-
-                </div>
-
-            </fieldset>
+        <div class="botoes">
+            <button class="reset" type="reset">Limpar</button>
+            <button class="submit" type="submit">Enviar</button>
+        </div>
 
         </form>
-
+        
     </div>
     
 </body>
