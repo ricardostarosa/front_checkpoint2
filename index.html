@@ -15,20 +15,27 @@
         }
         legend{
             font-weight: bold;
+            
+        
         }
 
         body{
 
             background: url(./img/bgform.png) ;
+            
+            
+            
         }
 
         .conteudo-form{
             width: 400px;
             padding: 40px 0px;
-            background-color: rgb(255, 255, 255);
+            background-color:rgb(8, 56, 78);
             border-radius: 40px;
             margin: 0 auto;
             position: relative;
+            border: 5px solid rgb(5, 2, 53);
+            
         }
 
         fieldset{
@@ -39,10 +46,15 @@
             margin-bottom: 10px;
             border-radius: 25px;
         }
+        #email{border: 2px solid rgb(81, 21, 95);}
+        #telefone{border: 2px solid rgb(80, 29, 92);}
+        #data-nasc{border: 2px solid rgb(81, 10, 97)}
+
         #nome{
 
            margin-bottom: 5px;
             transition: margin-bottom 1s;
+            border: 2px solid rgb(63, 12, 75);
         }
 
         #nome:focus{
@@ -57,57 +69,60 @@
             margin: 0px auto;
             text-align: center;
             width: 230px;   
-            left: 0px;
-            right: 0px;
+            left: 7px;
+            right: 7px;
             position: absolute;
-            bottom: -30px;
-            background-color: white;
+            bottom: 19px;
+            background-color: rgba(170, 29, 47, 0.787);
             border-color: gray;
             border-style: solid;         
-            border-width: 1px;
-            border-radius: 35px;
-            padding: 10px;
+            border-width: 0.6px;
+            border-radius: 25px;
+            padding: 8px;
         }
-
+       
         .submit{
             text-decoration-line: none;
             padding: 10px 30px;
-            background-color: lightgray;
+            background-color: rgba(0, 234, 255, 0.465);
             border-radius: 20px;
-            color: black;
+            color: white;
             transition:
-                background-color, 0.5s,
-                color, 0.5s;
-
+            background-color, 0.5s,
+            color, 0.5s;
+            margin-left: 10px;
+            
+             
         }
 
-        .submit:hover{
-            background-color: lightblue;
-            color: white;
+        .submit:hover, .submit :focus{
+            background-color: rgba(211, 37, 95, 0.685);
+            transform: translateX(10px) scale(1.2);
         }
 
-        //.reset{
-            text-decoration-line: none;
-            padding: 10px 30px;
-            background-color: blue;
-            border-radius: 20px;
-            color: white;
-        }
+  
 
         .reset{
             text-decoration-line: none;
             padding: 10px 30px;
-            background-color: blue;
+            background-color: rgba(89, 179, 187, 0.548);
             border-radius: 20px;
             color: white;
+            transition:
+            background-color, 0.5s,
+            color, 0.5s;
+            margin-left: -15px;
+           
         }
-
+        .reset:hover, .reset:focus {
+          background-color: rgba(211, 37, 95, 0.685);
+          transform: translateX(10px) scale(1.2);
+  
+}
 
         .cidade {
             display: flex;
-            margin-left: 0px ;
-            margin-bottom: 0px;
-            margin-top: 0px;
+            margin-left: 100px ;
             line-height: 30px;
             font-size: 30pt;
         }
@@ -116,7 +131,7 @@
         width: 30px;
         color:  red;
         font-size: 35pt;
-        text-shadow: 0.1em 0.1em rgba(212, 10, 20, 0.452); /*(EFEITO DE SOMBRA)*/
+        text-shadow: 0.1em 0.1em rgba(212, 10, 20, 0.555); /*(EFEITO DE SOMBRA)*/
         /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
         /*text-shadow: -1px 0 blue, 0 1px purple,
             1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
@@ -246,17 +261,16 @@
 
         
         .img:hover{
-            animation-play-state: paused;
+            animation-play-state: paused;}
         
 
         .img  {
-
-            margin-top: 560px;
+            margin-top: 233px;
             margin-bottom: 440px;
             margin-left: 45px;
             margin-right: 400px;
-            width: 50px;
-            height: 50px;
+            width: 70px;
+            height: 70px;
             vertical-align: top;
             position: absolute;
             animation: position 4s linear infinite;
@@ -293,7 +307,7 @@
                 <div class="d">D</div>
                 <div class="o">O</div>
                 <div class="r">R</div>
-                <img class="img" src="https://images.vexels.com/media/users/3/200384/isolated/preview/ac67c61b8003479587fa794f8f88d463-carnaval-carrinho-de-sorvete-cor.png" alt="carrinho">
+                <img class="img" src="https://i0.wp.com/www.maosaoauto.com.br/wp-content/uploads/2015/11/car-294491_1280.png?ssl=1">
             </div>
             <fieldset>
                 <legend>Dados Pessoais:</legend>
@@ -368,10 +382,10 @@
 
             </fieldset>          
 
-        <div class="botoes">
+           <div class="botoes">
             <button class="reset" type="reset">Limpar</button>
             <button class="submit" type="submit">Enviar</button>
-        </div>
+                </div>
 
         </form>
         
