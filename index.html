@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Kanit&family=Montserrat&family=Patrick+Hand&family=Road+Rage&family=Roboto+Condensed:ital@0;1&display=swap" rel="stylesheet" background-attachment: fixed;>
-    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Bras%C3%A3o_de_Salvador.svg/837px-Bras%C3%A3o_de_Salvador.svg.png"  type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Kanit&family=Montserrat&family=Patrick+Hand&family=Road+Rage&family=Roboto+Condensed:ital@0;1&display=swap"
+        rel="stylesheet" background-attachment: fixed;>
+    <link rel="shortcut icon"
+        href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Bras%C3%A3o_de_Salvador.svg/837px-Bras%C3%A3o_de_Salvador.svg.png"
+        type="image/x-icon">
     <title>Formulário</title>
-    
+
     <style>
+        /* Componentes : Digite seu nome aqui para saber se o repositório está funcionando. */
 
-            /* Componentes : Digite seu nome aqui para saber se o repositório está funcionando. */
-        
-        *{font-family: 'Roboto Condensed', sans-serif;}
-        
-        legend{font-weight: bold;}
+        * {
+            font-family: 'Roboto Condensed', sans-serif;
+        }
 
-        body{background: url(./img/bgform.png);
-        font-size: 13pt;}
+        legend {
+            font-weight: bold;
+        }
+
+        body {
+            background: url(./img/bgform.png);
+            font-size: 13pt;
+        }
 
 
-        .conteudo-form{
+        .conteudo-form {
             width: 500px;
             padding: 40px 0px;
-            background-color:rgb(8, 56, 78);
+            background-color: rgb(243, 243, 243);
             border-radius: 40px;
             margin: 0 auto;
             position: relative;
             border: 5px solid rgba(5, 2, 53, 0.72);
-            }
+        }
 
 
-        fieldset{
+        fieldset {
             width: 70%;
             margin: 0 auto;
             border: 0.3px solid rgb(73, 73, 73);
@@ -40,32 +50,81 @@
             border-radius: 25px;
         }
 
-        input#nome ,input#email, input#telefone, input#data-nasc{
+        input#nome,
+        input#email,
+        input#telefone,
+        input#data-nasc,
+        #selecao-interesses{
 
             width: 100%;
             padding: 5px;
             border-radius: 5px;
             margin-bottom: 8px;
+            transition: transform 0.2s ease-out,
+                margin-bottom 0.5s ease-in;
         }
-        #email{border: 2px solid rgb(81, 21, 95); transition: margin-bottom 1s;}
+
+        input#maior-idade,
+        #residencia,
+        #estudo,
+        #turismo {
+
+            transform: scale(1);
+            transition: transform 0.2s ease;
+        }
+
+        input#maior-idade:hover,
+        input#menor-idade:hover,
+        #residencia:hover,
+        #estudo:hover,
+        #turismo:hover {
+
+            transform: scale(1.3);
+        }
+
+        input#nome:hover,
+        input#email:hover,
+        input#telefone:hover,
+        input#data-nasc:hover,
+        #selecao-interesses:hover{
+
+            transform: scale(1.03);
+        }
+
+        input#nome:focus,
+        input#email:focus,
+        input#telefone:focus,
+        input#data-nasc:focus {
+            outline: none;
+            border: none;
+            border-bottom: 1px solid black;
+            margin-bottom: 20px;
+        }
+
+        /* border: 2px solid rgb(81, 21, 95); */
+
+        /* #email{ transition: margin-bottom 1s;}
         #telefone{border: 2px solid rgb(80, 29, 92); transition: margin-bottom 1s;}
         #data-nasc{border: 2px solid rgb(81, 10, 97); transition: margin-bottom 1s;}
         #nome{
             
             transition: margin-bottom 1s;
-            border: 2px solid rgb(63, 12, 75);}
+            border: 2px solid rgb(63, 12, 75);} */
 
-        #selecao-interesses{border: 2px solid rgb(81, 10, 97);}
+        #selecao-interesses {
 
-        #nome:focus,  #email:focus,  #telefone:focus,  #data-nasc:focus{
-            outline: none;
-            border: none;
-            border-bottom: 1px solid black;
-            margin-bottom: 15px;}
+            width: 100%;
+            padding: 5px;
+            border-radius: 5px;
+            border: 2px solid rgb(81, 10, 97);
+
+        }
 
 
 
-        .botoes{
+
+
+        .botoes {
             margin: 20px auto 0px;
             /* text-align: center; */
             width: 230px;
@@ -75,47 +134,52 @@
             /* bottom: 19px; */
             background-color: rgba(170, 29, 47, 0.787);
             border-color: gray;
-            border-style: solid;         
+            border-style: solid;
             border-width: 0.6px;
             border-radius: 25px;
-            padding: 8px;}
-       
-        .submit{
+            padding: 8px;
+        }
+
+        .submit {
             text-decoration-line: none;
             padding: 10px 30px;
             background-color: rgba(0, 234, 255, 0.465);
             border-radius: 20px;
             color: white;
             transition:
-            background-color, 0.5s,
-            color, 0.5s;
+                background-color, 0.5s,
+                color, 0.5s;
             margin-left: 10px;
         }
 
 
 
-        .submit:hover, .submit :focus{
+        .submit:hover,
+        .submit :focus {
             background-color: rgba(211, 37, 95, 0.685);
-            transform: scale(1.2);}
+            transform: scale(1.2);
+        }
 
-  
 
-        .reset{
+
+        .reset {
             text-decoration-line: none;
             padding: 10px 30px;
             background-color: rgba(89, 179, 187, 0.548);
             border-radius: 20px;
             color: white;
             transition:
-            background-color, 0.5s,
-            color, 0.5s;
+                background-color, 0.5s,
+                color, 0.5s;
             margin-left: 10px;
-            }
+        }
 
 
-        .reset:hover, .reset:focus {
-          background-color: rgba(211, 37, 95, 0.685);
-          transform: scale(1.2);}
+        .reset:hover,
+        .reset:focus {
+            background-color: rgba(211, 37, 95, 0.685);
+            transform: scale(1.2);
+        }
 
 
 
@@ -125,156 +189,246 @@
             justify-content: center;
             margin-bottom: 15px;
             line-height: 30px;
-            font-size: 30pt;}
-            
+            font-size: 30pt;
+        }
+
 
 
         .s {
-        width: 30px;
-        color:  red;
-        font-size: 35pt;
-        text-shadow: 0.1em 0.1em rgba(212, 10, 20, 0.555); /*(EFEITO DE SOMBRA)*/
-        /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
-        /*text-shadow: -1px 0 blue, 0 1px purple,
+            width: 30px;
+            color: red;
+            font-size: 35pt;
+            text-shadow: 0.1em 0.1em rgba(212, 10, 20, 0.555);
+            /*(EFEITO DE SOMBRA)*/
+            /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
+            /*text-shadow: -1px 0 blue, 0 1px purple,
             1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
-        animation: fadeInfadeOut 10s linear infinite;
-        animation: fadeInfadeOut 3s ease infinite;}
+            animation: fadeInfadeOut 10s linear infinite;
+            animation: fadeInfadeOut 3s ease infinite;
+        }
 
         @keyframes fadeInfadeOut {
-            0% {opacity: 1;}
-            50%{ opacity: 0.2;}
-            100% { opacity: 1;}}
+            0% {
+                opacity: 1;
+            }
 
-            .s:hover{
+            50% {
+                opacity: 0.2;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .s:hover {
             animation-play-state: paused;
         }
 
 
 
 
-        .a{
-        color:  blue;
-        width: 30px;
-        text-shadow: 0.1em 0.1em rgba(10, 47, 212, 0.575); /*(EFEITO DE SOMBRA)*/
-        /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
-        /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
-        animation: fadeInfadeOut 9s linear infinite;
-        animation: fadeInfadeOut 5s ease infinite;}
+        .a {
+            color: blue;
+            width: 30px;
+            text-shadow: 0.1em 0.1em rgba(10, 47, 212, 0.575);
+            /*(EFEITO DE SOMBRA)*/
+            /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
+            /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
+            animation: fadeInfadeOut 9s linear infinite;
+            animation: fadeInfadeOut 5s ease infinite;
+        }
 
         @keyframes fadeInfadeOut {
-        0% {opacity: 1;}
-            50%{ opacity: 0.2;}
-            100% { opacity: 1;}}
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.2;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
 
 
 
 
-        .l{
-        color:  green;
-        
-        text-shadow: 0.1em 0.1em rgba(10, 212, 77, 0.602); /*(EFEITO DE SOMBRA)*/
-        /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
-        /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
-        animation: fadeInfadeOut 8s linear infinite;
-        animation: fadeInfadeOut 4s ease infinite; }
+        .l {
+            color: green;
 
-        @keyframes fadeInfadeOut{
-        0% {opacity: 1;}
-            50%{ opacity: 0.2;}
-            100% { opacity: 1;}}
-
-
-
-        .v{
-        color:  yellow;
-    
-        text-shadow: 0.1em 0.1em rgba(236, 224, 92, 0.64); /*(EFEITO DE SOMBRA)*/
-        /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
-        /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
-        animation: fadeInfadeOut 7s linear infinite;
-        animation: fadeInfadeOut 7s ease infinite; }
-
-        @keyframes fadeInfadeOut{
-        0% {opacity: 1;}
-            50%{ opacity: 0.2;}
-            100% { opacity: 1;}}
-
-
-
-
-        .a2{
-        color:  blue;
-        font-family: 'Bebas Neue', cursive;
-        text-shadow: 0.1em 0.1em rgba(10, 57, 212, 0.602); /*(EFEITO DE SOMBRA)*/
-        /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
-        /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
-        animation: fadeInfadeOut 6s linear infinite;
-        animation: fadeInfadeOut 8s ease infinite;}
+            text-shadow: 0.1em 0.1em rgba(10, 212, 77, 0.602);
+            /*(EFEITO DE SOMBRA)*/
+            /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
+            /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
+            animation: fadeInfadeOut 8s linear infinite;
+            animation: fadeInfadeOut 4s ease infinite;
+        }
 
         @keyframes fadeInfadeOut {
-        0% {opacity: 1;}
-            50%{ opacity: 0.2;}
-            100% { opacity: 1;}
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.2;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+
+
+        .v {
+            color: yellow;
+
+            text-shadow: 0.1em 0.1em rgba(236, 224, 92, 0.64);
+            /*(EFEITO DE SOMBRA)*/
+            /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
+            /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
+            animation: fadeInfadeOut 7s linear infinite;
+            animation: fadeInfadeOut 7s ease infinite;
+        }
+
+        @keyframes fadeInfadeOut {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.2;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+
+
+
+        .a2 {
+            color: blue;
+            font-family: 'Bebas Neue', cursive;
+            text-shadow: 0.1em 0.1em rgba(10, 57, 212, 0.602);
+            /*(EFEITO DE SOMBRA)*/
+            /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
+            /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
+            animation: fadeInfadeOut 6s linear infinite;
+            animation: fadeInfadeOut 8s ease infinite;
+        }
+
+        @keyframes fadeInfadeOut {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.2;
+            }
+
+            100% {
+                opacity: 1;
+            }
 
 
 
         }
-        .d{
-        color: red;
-       
-        text-shadow: 0.1em 0.1em rgba(212, 10, 87, 0.554); /*(EFEITO DE SOMBRA)*/
-        /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
-        /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
-        animation: fadeInfadeOut 5s linear infinite;
-        animation: fadeInfadeOut 4s ease infinite;}
+
+        .d {
+            color: red;
+
+            text-shadow: 0.1em 0.1em rgba(212, 10, 87, 0.554);
+            /*(EFEITO DE SOMBRA)*/
+            /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
+            /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
+            animation: fadeInfadeOut 5s linear infinite;
+            animation: fadeInfadeOut 4s ease infinite;
+        }
 
         @keyframes fadeInfadeOut {
-        0% {opacity: 1;}
-            50%{ opacity: 0.2;}
-            100% { opacity: 1;}}
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.2;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
 
 
 
-        .o{
-        color: yellow;
-        
-        text-shadow: 0.1em 0.1em rgba(223, 221, 98, 0.527); /*(EFEITO DE SOMBRA)*/
-        /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
-        /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
-        animation: fadeInfadeOut 4s linear infinite;
-        animation: fadeInfadeOut 5s ease infinite;}
+        .o {
+            color: yellow;
+
+            text-shadow: 0.1em 0.1em rgba(223, 221, 98, 0.527);
+            /*(EFEITO DE SOMBRA)*/
+            /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
+            /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
+            animation: fadeInfadeOut 4s linear infinite;
+            animation: fadeInfadeOut 5s ease infinite;
+        }
 
         @keyframes fadeInfadeOut {
-        0% {opacity: 1;}
-            50%{ opacity: 0.2;}
-            100% { opacity: 1;}}
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.2;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
 
 
 
-        .r{
-        color: purple;
-        
-        text-shadow: 0.1em 0.1em rgba(195, 10, 212, 0.657); /*(EFEITO DE SOMBRA)*/
-        /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
-        /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
-        animation: fadeInfadeOut 3s linear infinite;
-        animation: fadeInfadeOut 2s ease infinite; }
+        .r {
+            color: purple;
 
-        @keyframes fadeInfadeOut{
-        0% {opacity: 2;}
-            50%{ opacity: 0.2;}
-            100% { opacity: 1;}}
+            text-shadow: 0.1em 0.1em rgba(195, 10, 212, 0.657);
+            /*(EFEITO DE SOMBRA)*/
+            /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
+            /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
+            animation: fadeInfadeOut 3s linear infinite;
+            animation: fadeInfadeOut 2s ease infinite;
+        }
+
+        @keyframes fadeInfadeOut {
+            0% {
+                opacity: 2;
+            }
+
+            50% {
+                opacity: 0.2;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
 
 
-        
-        .img:hover{
-            animation-play-state: paused;}
-        
+
+        .img:hover {
+            animation-play-state: paused;
+        }
+
 
         .img {
             margin-top: 380px;
             /* margin-bottom: 440px; */
-            
+
             margin-left: 45px;
             margin-right: 400px;
             width: 70px;
@@ -282,25 +436,32 @@
             /* vertical-align: top; */
             position: absolute;
             animation: position 4s linear infinite;
-            animation-direction: alternate;}
+            animation-direction: alternate;
+        }
 
-        @keyframes position{
-            0% {top: 0;
-                left: 0;}
-            100%{top: 0;
-                left: calc(100% - 100px);}
-                /*
+        @keyframes position {
+            0% {
+                top: 0;
+                left: 0;
+            }
+
+            100% {
+                top: 0;
+                left: calc(100% - 100px);
+            }
+
+            /*
             50% { top: calc(100% - 100px);
                 left: calc(100% - 100px);}
                 85% { top: calc(100% - 100px);
                 left: 0;}
                 100% { top: 0;
                 left: 0;}*/
-            }
-            
+        }
     </style>
     <title>Formulário</title>
 </head>
+
 <body>
     <div class="conteudo-form">
 
@@ -314,44 +475,45 @@
                 <div class="d">D</div>
                 <div class="o">O</div>
                 <div class="r">R</div>
-                <img class="img" src="https://i0.wp.com/www.maosaoauto.com.br/wp-content/uploads/2015/11/car-294491_1280.png?ssl=1">
+                <img class="img"
+                    src="https://i0.wp.com/www.maosaoauto.com.br/wp-content/uploads/2015/11/car-294491_1280.png?ssl=1">
             </div>
             <fieldset>
                 <legend>Dados Pessoais:</legend>
                 <div class="nome">
                     <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required placeholder="Digite o seu nome." maxlength="100"> 
+                    <input type="text" id="nome" name="nome" required placeholder="Digite o seu nome." maxlength="100">
                 </div>
 
                 <div class="email">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required placeholder="Ex: meu_nome@email.com.br "> 
+                    <input type="email" id="email" name="email" required placeholder="Ex: meu_nome@email.com.br ">
                 </div>
 
                 <div class="telefone">
                     <label for="telefone">Telefone:</label>
-                    <input type="text" id="telefone" name="telefone" placeholder="(xx)xxxxx-xxxx"> 
+                    <input type="text" id="telefone" name="telefone" placeholder="(xx)xxxxx-xxxx">
                 </div>
 
                 <div class="data-nasc">
                     <label for="data-nasc">Data Nascimento:</label>
-                    <input type="date" id="data-nasc" name="data-nasc" required> 
+                    <input type="date" id="data-nasc" name="data-nasc" required>
                 </div>
 
                 <div class="maior-idade">
                     <input type="radio" id="maior-idade" name="maior-idade" value="maior-idade">
-                    <label for="maior-idade">Maior de idade</label> 
+                    <label for="maior-idade">Maior de idade</label>
                 </div>
 
                 <div class="menor-idade">
                     <input type="radio" id="menor-idade" name="maior-idade" value="menor-idade">
-                    <label for="menor-idade">Menor de idade</label> 
+                    <label for="menor-idade">Menor de idade</label>
                 </div>
-             </fieldset>
+            </fieldset>
 
-             <fieldset>
+            <fieldset>
                 <legend>Interesses:</legend>
-                
+
                 <div class="selecao-interesses">
                     <label for="nome">Interesses Turísticos</label>
                     <select name="selecao-interesses" id="selecao-interesses">
@@ -361,42 +523,43 @@
                             <option value="">Praça Tereza Batista</option>
                         </optgroup>
 
-                        <optgroup label="Circuitos do Carnaval" >
+                        <optgroup label="Circuitos do Carnaval">
                             <option value="">Barra-Ondina(Dodô)</option>
                             <option value="">Pelourinho(Batatinha)</option>
                             <option value="">Centro(Osmar)</option>
                         </optgroup>
-                    </select> 
+                    </select>
 
                     <p class="interesses-pessoais">Interesses Pessoais:</p>
 
                     <div class="interesses-pessoais">
-                        <input type="checkbox" id="residencia" name="residencia" value="residencia">
-                        <label for="residencia">Turismo</label> 
+                        <input type="checkbox" id="turismo" name="turismo" value="turismo">
+                        <label for="turismo">Turismo</label>
                     </div>
 
                     <div class="interesses-pessoais">
                         <input type="checkbox" id="residencia" name="residencia" value="residencia">
-                        <label for="residencia">Residência</label> 
+                        <label for="residencia">Residência</label>
                     </div>
 
                     <div class="interesses-pessoais">
-                        <input type="checkbox" id="residencia" name="residencia" value="residencia">
-                        <label for="residencia">Estudo</label> 
+                        <input type="checkbox" id="estudo" name="estudo" value="estudo">
+                        <label for="estudo">Estudo</label>
                     </div>
 
                 </div>
 
-            </fieldset>          
+            </fieldset>
 
-           <div class="botoes">
-            <button class="reset" type="reset">Limpar</button>
-            <button class="submit" type="submit">Enviar</button>
-                </div>
+            <div class="botoes">
+                <button class="reset" type="reset">Limpar</button>
+                <button class="submit" type="submit">Enviar</button>
+            </div>
 
         </form>
-        
+
     </div>
-    
+
 </body>
+
 </html>
