@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Kanit&family=Montserrat&family=Patrick+Hand&family=Road+Rage&family=Roboto+Condensed:ital@0;1&display=swap"
-        rel="stylesheet" background-attachment: fixed;>
-    <link rel="shortcut icon"
-        href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Bras%C3%A3o_de_Salvador.svg/837px-Bras%C3%A3o_de_Salvador.svg.png"
-        type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Kanit&family=Montserrat&family=Patrick+Hand&family=Road+Rage&family=Roboto+Condensed:ital@0;1&display=swap" rel="stylesheet" background-attachment: fixed;>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Road+Rage&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Bras%C3%A3o_de_Salvador.svg/837px-Bras%C3%A3o_de_Salvador.svg.png"  type="image/x-icon">
     <title>Formulário</title>
 
     <style>
@@ -28,12 +27,10 @@
             background: url(./img/bgform.png);
             font-size: 13pt;
         }
-
-
-        .conteudo-form {
-            width: 500px;
-            padding: 40px 0px;
-            background-color: rgb(243, 243, 243);
+        .conteudo-form{
+            width: 400px;
+            padding: 20px 0px;
+            background-color:rgb(255, 255, 255);
             border-radius: 40px;
             margin: 0 auto;
             position: relative;
@@ -50,13 +47,8 @@
             border-radius: 25px;
         }
 
-        input#nome,
-        input#email,
-        input#telefone,
-        input#data-nasc,
-        #selecao-interesses{
-
-            width: 100%;
+        input#nome ,input#email, input#telefone, input#data-nasc{
+            width: 280px;
             padding: 5px;
             border-radius: 5px;
             margin-bottom: 8px;
@@ -96,8 +88,7 @@
         input#telefone:focus,
         input#data-nasc:focus {
             outline: none;
-            border: none;
-            border-bottom: 1px solid black;
+            border: 2px solid rgb(116, 15, 136);
             margin-bottom: 20px;
         }
 
@@ -112,76 +103,63 @@
             border: 2px solid rgb(63, 12, 75);} */
 
         #selecao-interesses {
-
             width: 100%;
             padding: 5px;
             border-radius: 5px;
-            border: 2px solid rgb(81, 10, 97);
-
         }
 
+        #selecao-interesses{
+            width: 280px;
+        }
 
-
-
-
-        .botoes {
-            margin: 20px auto 0px;
-            /* text-align: center; */
+        .botoes__fundo{
+            margin: 0px auto 0px;
             width: 230px;
-            /* left: 7px;
-            right: 7px;
-            position: absolute; */
-            /* bottom: 19px; */
-            background-color: rgba(170, 29, 47, 0.787);
-            border-color: gray;
-            border-style: solid;
+            right: auto;
+            left:auto;
+            bottom: 0px;
+            background-color: rgba(255, 255, 255);
+            border-color: rgb(73, 73, 73);
+            border-style: solid;         
             border-width: 0.6px;
-            border-radius: 25px;
+            border-radius: 30px;
             padding: 8px;
         }
 
-        .submit {
+        .botoes__fundo__submit{
             text-decoration-line: none;
             padding: 10px 30px;
-            background-color: rgba(0, 234, 255, 0.465);
+            background-color: blue;
             border-radius: 20px;
             color: white;
             transition:
                 background-color, 0.5s,
                 color, 0.5s;
             margin-left: 10px;
+            font-weight: bold;
         }
 
-
-
-        .submit:hover,
-        .submit :focus {
-            background-color: rgba(211, 37, 95, 0.685);
-            transform: scale(1.2);
-        }
-
-
-
-        .reset {
+        .botoes__fundo__reset{
             text-decoration-line: none;
             padding: 10px 30px;
-            background-color: rgba(89, 179, 187, 0.548);
+            background-color: rgb(194, 194, 194);
             border-radius: 20px;
-            color: white;
+            color: black;
             transition:
-                background-color, 0.5s,
-                color, 0.5s;
+                background-color, 0.3s,
+                color, 0.3s;
             margin-left: 10px;
+            font-weight: bold;
         }
 
-
-        .reset:hover,
-        .reset:focus {
-            background-color: rgba(211, 37, 95, 0.685);
-            transform: scale(1.2);
-        }
-
-
+        .botoes__fundo__submit:hover {
+            background-color: red;
+            transform: scale(1.2);}
+    
+        .botoes__fundo__reset:hover {
+          background-color: red;
+          color: white;
+          transform: scale(1.2);}
 
         .cidade {
             display: flex;
@@ -189,19 +167,19 @@
             justify-content: center;
             margin-bottom: 15px;
             line-height: 30px;
-            font-size: 30pt;
+            font-size: 30pt;}
+            
+        .s, .a, .l, .v, .a2, .d, .o, .r{
+            font-family: 'Road Rage', cursive;
+            width: 20px;
+            font-size: 40pt;
         }
 
-
-
         .s {
-            width: 30px;
-            color: red;
-            font-size: 35pt;
-            text-shadow: 0.1em 0.1em rgba(212, 10, 20, 0.555);
-            /*(EFEITO DE SOMBRA)*/
-            /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
-            /*text-shadow: -1px 0 blue, 0 1px purple,
+        color:  red;
+        text-shadow: 0.1em 0.1em rgba(212, 10, 20, 0.555); /*(EFEITO DE SOMBRA)*/
+        /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
+        /*text-shadow: -1px 0 blue, 0 1px purple,
             1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
             animation: fadeInfadeOut 10s linear infinite;
             animation: fadeInfadeOut 3s ease infinite;
@@ -221,44 +199,18 @@
             }
         }
 
-        .s:hover {
-            animation-play-state: paused;
+        .a{
+        color:  blue;
+        text-shadow: 0.1em 0.1em rgba(10, 47, 212, 0.575); /*(EFEITO DE SOMBRA)*/
+        /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
+        /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
+        animation: fadeInfadeOut 9s linear infinite;
+        animation: fadeInfadeOut 5s ease infinite;
         }
-
-
-
-
-        .a {
-            color: blue;
-            width: 30px;
-            text-shadow: 0.1em 0.1em rgba(10, 47, 212, 0.575);
-            /*(EFEITO DE SOMBRA)*/
-            /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
-            /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
-            animation: fadeInfadeOut 9s linear infinite;
-            animation: fadeInfadeOut 5s ease infinite;
-        }
-
-        @keyframes fadeInfadeOut {
-            0% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0.2;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-
 
 
         .l {
             color: green;
-
             text-shadow: 0.1em 0.1em rgba(10, 212, 77, 0.602);
             /*(EFEITO DE SOMBRA)*/
             /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
@@ -267,76 +219,23 @@
             animation: fadeInfadeOut 4s ease infinite;
         }
 
-        @keyframes fadeInfadeOut {
-            0% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0.2;
-            }
-
-            100% {
-                opacity: 1;
-            }
+        .v{
+        color:  rgb(199, 199, 1);
+        text-shadow: 0.1em 0.1em rgba(236, 224, 92, 0.64); /*(EFEITO DE SOMBRA)*/
+        /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
+        /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
+        animation: fadeInfadeOut 7s linear infinite;
+        animation: fadeInfadeOut 7s ease infinite; 
         }
-
-
-
-        .v {
-            color: yellow;
-
-            text-shadow: 0.1em 0.1em rgba(236, 224, 92, 0.64);
-            /*(EFEITO DE SOMBRA)*/
-            /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
-            /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
-            animation: fadeInfadeOut 7s linear infinite;
-            animation: fadeInfadeOut 7s ease infinite;
-        }
-
-        @keyframes fadeInfadeOut {
-            0% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0.2;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-
-
 
         .a2 {
             color: blue;
-            font-family: 'Bebas Neue', cursive;
             text-shadow: 0.1em 0.1em rgba(10, 57, 212, 0.602);
             /*(EFEITO DE SOMBRA)*/
             /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
             /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
             animation: fadeInfadeOut 6s linear infinite;
             animation: fadeInfadeOut 8s ease infinite;
-        }
-
-        @keyframes fadeInfadeOut {
-            0% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0.2;
-            }
-
-            100% {
-                opacity: 1;
-            }
-
-
-
         }
 
         .d {
@@ -350,52 +249,18 @@
             animation: fadeInfadeOut 4s ease infinite;
         }
 
-        @keyframes fadeInfadeOut {
-            0% {
-                opacity: 1;
-            }
 
-            50% {
-                opacity: 0.2;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-
-
-        .o {
-            color: yellow;
-
-            text-shadow: 0.1em 0.1em rgba(223, 221, 98, 0.527);
-            /*(EFEITO DE SOMBRA)*/
+        .o{
+            color:rgb(199, 199, 1);
+            text-shadow: 0.1em 0.1em rgba(223, 221, 98, 0.527); /*(EFEITO DE SOMBRA)*/
             /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
             /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
             animation: fadeInfadeOut 4s linear infinite;
             animation: fadeInfadeOut 5s ease infinite;
         }
 
-        @keyframes fadeInfadeOut {
-            0% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0.2;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-
-
         .r {
             color: purple;
-
             text-shadow: 0.1em 0.1em rgba(195, 10, 212, 0.657);
             /*(EFEITO DE SOMBRA)*/
             /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
@@ -403,21 +268,6 @@
             animation: fadeInfadeOut 3s linear infinite;
             animation: fadeInfadeOut 2s ease infinite;
         }
-
-        @keyframes fadeInfadeOut {
-            0% {
-                opacity: 2;
-            }
-
-            50% {
-                opacity: 0.2;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
 
 
         .img:hover {
@@ -551,9 +401,9 @@
 
             </fieldset>
 
-            <div class="botoes">
-                <button class="reset" type="reset">Limpar</button>
-                <button class="submit" type="submit">Enviar</button>
+            <div class="botoes__fundo">
+                <button class="botoes__fundo__reset" type="reset">Limpar</button>
+                <button class="botoes__fundo__submit" type="submit">Enviar</button>
             </div>
 
         </form>
