@@ -21,7 +21,7 @@
 
 
         .conteudo-form{
-            width: 400px;
+            width: 500px;
             padding: 40px 0px;
             background-color:rgb(8, 56, 78);
             border-radius: 40px;
@@ -39,32 +39,40 @@
             margin-bottom: 10px;
             border-radius: 25px;
         }
-        #email{border: 2px solid rgb(81, 21, 95);}
-        #telefone{border: 2px solid rgb(80, 29, 92);}
-        #data-nasc{border: 2px solid rgb(81, 10, 97);}
+
+        input#nome ,input#email, input#telefone, input#data-nasc{
+
+            width: 100%;
+            padding: 5px;
+            border-radius: 5px;
+            margin-bottom: 8px;
+        }
+        #email{border: 2px solid rgb(81, 21, 95); transition: margin-bottom 1s;}
+        #telefone{border: 2px solid rgb(80, 29, 92); transition: margin-bottom 1s;}
+        #data-nasc{border: 2px solid rgb(81, 10, 97); transition: margin-bottom 1s;}
         #nome{
-            margin-bottom: 5px;
+            
             transition: margin-bottom 1s;
             border: 2px solid rgb(63, 12, 75);}
 
+        #selecao-interesses{border: 2px solid rgb(81, 10, 97);}
 
-        #nome:focus{
+        #nome:focus,  #email:focus,  #telefone:focus,  #data-nasc:focus{
             outline: none;
             border: none;
             border-bottom: 1px solid black;
             margin-bottom: 15px;}
 
-        #selecao-interesses{border: 2px solid rgb(81, 10, 97);}
 
 
         .botoes{
-            margin: 0px auto;
-            text-align: center;
-            width: 230px;   
-            left: 7px;
+            margin: 20px auto 0px;
+            /* text-align: center; */
+            width: 230px;
+            /* left: 7px;
             right: 7px;
-            position: absolute;
-            bottom: 19px;
+            position: absolute; */
+            /* bottom: 19px; */
             background-color: rgba(170, 29, 47, 0.787);
             border-color: gray;
             border-style: solid;         
@@ -81,13 +89,14 @@
             transition:
             background-color, 0.5s,
             color, 0.5s;
-            margin-left: 10px;}
+            margin-left: 10px;
+        }
 
 
 
         .submit:hover, .submit :focus{
             background-color: rgba(211, 37, 95, 0.685);
-            transform: translateX(10px) scale(1.2);}
+            transform: scale(1.2);}
 
   
 
@@ -100,18 +109,21 @@
             transition:
             background-color, 0.5s,
             color, 0.5s;
-            margin-left: -15px;}
+            margin-left: 10px;
+            }
 
 
         .reset:hover, .reset:focus {
           background-color: rgba(211, 37, 95, 0.685);
-          transform: translateX(10px) scale(1.2);}
+          transform: scale(1.2);}
 
 
 
         .cidade {
             display: flex;
-            margin-left: 100px ;
+            /* margin-left: 100px ; */
+            justify-content: center;
+            margin-bottom: 15px;
             line-height: 30px;
             font-size: 30pt;}
             
@@ -259,14 +271,15 @@
             animation-play-state: paused;}
         
 
-        .img  {
-            margin-top: 233px;
-            margin-bottom: 440px;
+        .img {
+            margin-top: 380px;
+            /* margin-bottom: 440px; */
+            
             margin-left: 45px;
             margin-right: 400px;
             width: 70px;
             height: 70px;
-            vertical-align: top;
+            /* vertical-align: top; */
             position: absolute;
             animation: position 4s linear infinite;
             animation-direction: alternate;}
