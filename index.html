@@ -4,28 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Kanit&family=Montserrat&family=Patrick+Hand&family=Road+Rage&family=Roboto+Condensed:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Kanit&family=Montserrat&family=Patrick+Hand&family=Road+Rage&family=Roboto+Condensed:ital@0;1&display=swap" rel="stylesheet" background-attachment: fixed;>
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Bras%C3%A3o_de_Salvador.svg/837px-Bras%C3%A3o_de_Salvador.svg.png"  type="image/x-icon">
+    <title>Formulário</title>
     
     <style>
 
             /* Componentes : Digite seu nome aqui para saber se o repositório está funcionando. */
         
-        *{
-            font-family: 'Roboto Condensed', sans-serif;
-        }
-        legend{
-            font-weight: bold;
-            
+        *{font-family: 'Roboto Condensed', sans-serif;}
         
-        }
+        legend{font-weight: bold;}
 
-        body{
+        body{background: url(./img/bgform.png);
+        font-size: 13pt;}
 
-            background: url(./img/bgform.png) ;
-            
-            
-            
-        }
 
         .conteudo-form{
             width: 400px;
@@ -35,8 +28,8 @@
             margin: 0 auto;
             position: relative;
             border: 5px solid rgb(5, 2, 53);
-            
-        }
+            }
+
 
         fieldset{
             width: 70%;
@@ -48,22 +41,21 @@
         }
         #email{border: 2px solid rgb(81, 21, 95);}
         #telefone{border: 2px solid rgb(80, 29, 92);}
-        #data-nasc{border: 2px solid rgb(81, 10, 97)}
-
+        #data-nasc{border: 2px solid rgb(81, 10, 97);}
         #nome{
-
-           margin-bottom: 5px;
+            margin-bottom: 5px;
             transition: margin-bottom 1s;
-            border: 2px solid rgb(63, 12, 75);
-        }
+            border: 2px solid rgb(63, 12, 75);}
+
 
         #nome:focus{
             outline: none;
             border: none;
             border-bottom: 1px solid black;
-            margin-bottom: 15px;
+            margin-bottom: 15px;}
 
-        }
+        #selecao-interesses{border: 2px solid rgb(81, 10, 97);}
+
 
         .botoes{
             margin: 0px auto;
@@ -78,8 +70,7 @@
             border-style: solid;         
             border-width: 0.6px;
             border-radius: 25px;
-            padding: 8px;
-        }
+            padding: 8px;}
        
         .submit{
             text-decoration-line: none;
@@ -90,15 +81,13 @@
             transition:
             background-color, 0.5s,
             color, 0.5s;
-            margin-left: 10px;
-            
-             
-        }
+            margin-left: 10px;}
+
+
 
         .submit:hover, .submit :focus{
             background-color: rgba(211, 37, 95, 0.685);
-            transform: translateX(10px) scale(1.2);
-        }
+            transform: translateX(10px) scale(1.2);}
 
   
 
@@ -111,21 +100,22 @@
             transition:
             background-color, 0.5s,
             color, 0.5s;
-            margin-left: -15px;
-           
-        }
+            margin-left: -15px;}
+
+
         .reset:hover, .reset:focus {
           background-color: rgba(211, 37, 95, 0.685);
-          transform: translateX(10px) scale(1.2);
-  
-}
+          transform: translateX(10px) scale(1.2);}
+
+
 
         .cidade {
             display: flex;
             margin-left: 100px ;
             line-height: 30px;
-            font-size: 30pt;
-        }
+            font-size: 30pt;}
+
+
 
         .s {
         width: 30px;
@@ -136,14 +126,14 @@
         /*text-shadow: -1px 0 blue, 0 1px purple,
             1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
         animation: fadeInfadeOut 8s linear infinite;
-        animation: fadeInfadeOut 2s ease infinite;
-        }
+        animation: fadeInfadeOut 2s ease infinite;}
 
         @keyframes fadeInfadeOut {
             0% {opacity: 1;}
             50%{ opacity: 0.2;}
-            100% { opacity: 1;}
-        }
+            100% { opacity: 1;}}
+
+
 
 
         .a{
@@ -153,15 +143,16 @@
         /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
         /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
         animation: fadeInfadeOut 8s linear infinite;
-        animation: fadeInfadeOut 2s ease infinite;
-
-        }
+        animation: fadeInfadeOut 2s ease infinite;}
 
         @keyframes fadeInfadeOut {
         0% {opacity: 1;}
             50%{ opacity: 0.2;}
-            100% { opacity: 1;}
-        }
+            100% { opacity: 1;}}
+
+
+
+
         .l{
         color:  green;
         
@@ -169,14 +160,14 @@
         /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
         /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
         animation: fadeInfadeOut 8s linear infinite;
-        animation: fadeInfadeOut 2s ease infinite; 
-        }
+        animation: fadeInfadeOut 2s ease infinite; }
 
         @keyframes fadeInfadeOut{
         0% {opacity: 1;}
             50%{ opacity: 0.2;}
-            100% { opacity: 1;}
-        }
+            100% { opacity: 1;}}
+
+
 
         .v{
         color:  yellow;
@@ -185,14 +176,14 @@
         /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
         /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
         animation: fadeInfadeOut 8s linear infinite;
-        animation: fadeInfadeOut 2s ease infinite; 
-        }
+        animation: fadeInfadeOut 2s ease infinite; }
 
         @keyframes fadeInfadeOut{
         0% {opacity: 1;}
             50%{ opacity: 0.2;}
-            100% { opacity: 1;}
-        }
+            100% { opacity: 1;}}
+
+
 
 
         .a2{
@@ -202,14 +193,15 @@
         /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
         /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
         animation: fadeInfadeOut 8s linear infinite;
-        animation: fadeInfadeOut 2s ease infinite; 
-
-        }
+        animation: fadeInfadeOut 2s ease infinite;}
 
         @keyframes fadeInfadeOut {
         0% {opacity: 1;}
             50%{ opacity: 0.2;}
             100% { opacity: 1;}
+
+
+
         }
         .d{
         color: red;
@@ -218,14 +210,15 @@
         /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
         /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
         animation: fadeInfadeOut 8s linear infinite;
-        animation: fadeInfadeOut 2s ease infinite; 
-        }
+        animation: fadeInfadeOut 2s ease infinite;}
 
         @keyframes fadeInfadeOut {
         0% {opacity: 1;}
             50%{ opacity: 0.2;}
-            100% { opacity: 1;}
-        }
+            100% { opacity: 1;}}
+
+
+
         .o{
         color: yellow;
         
@@ -233,14 +226,14 @@
         /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
         /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
         animation: fadeInfadeOut 8s linear infinite;
-        animation: fadeInfadeOut 2s ease infinite; 
-        }
+        animation: fadeInfadeOut 2s ease infinite;}
 
         @keyframes fadeInfadeOut {
         0% {opacity: 1;}
             50%{ opacity: 0.2;}
-            100% { opacity: 1;}
-        }
+            100% { opacity: 1;}}
+
+
 
         .r{
         color: purple;
@@ -249,14 +242,12 @@
         /*text-shadow: 0 0 0.2em rgb(247, 0, 255); efeito neon*/
         /*text-shadow: -1px 0 blue, 0 1px purple, 1px 0 grey, 0 -1px green; (EFEITO DE CONTORNO- cada parametro indica o direcionamento do contorno)*/
         animation: fadeInfadeOut 8s linear infinite;
-        animation: fadeInfadeOut 2s ease infinite; 
-        }
+        animation: fadeInfadeOut 2s ease infinite; }
 
         @keyframes fadeInfadeOut{
         0% {opacity: 2;}
             50%{ opacity: 0.2;}
-            100% { opacity: 1;}
-        }
+            100% { opacity: 1;}}
 
 
         
@@ -274,9 +265,8 @@
             vertical-align: top;
             position: absolute;
             animation: position 4s linear infinite;
-            animation-direction: alternate;
+            animation-direction: alternate;}
 
-        }
         @keyframes position{
             0% {top: 0;
                 left: 0;}
