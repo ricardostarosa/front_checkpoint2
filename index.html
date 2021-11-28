@@ -10,14 +10,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Road+Rage&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Bras%C3%A3o_de_Salvador.svg/837px-Bras%C3%A3o_de_Salvador.svg.png"  type="image/x-icon">
-    <title>Formulário</title>
+    <title>Conheça Salvador</title>
 
-    <style>
+    <meta name="description" content="Conheça Salvador">
+    <meta name="robots" content="noindex, noimageindex">
+    <meta http-equiv="content-language" content="pt-br">
+
+    <meta name="author" content="Ana Paula Gessi">
+    <meta name="author" content="Guilherme Lotto">
+    <meta name="author" content="Henrique Venancio">
+    <meta name="author" content="Ricardo Santa Rosa">
+    <meta name="author" content="Roberta da Silva">
+
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
 
 
-        * {font-family: 'Roboto Condensed', sans-serif;}
+        * {
+            font-family: 'Roboto Condensed', sans-serif;
+        }
 
-        legend {font-weight: bold;}
+
+        legend {
+            font-weight: bold;
+        }
 
 
         body {
@@ -25,9 +41,11 @@
             font-size: 13pt;
             background-repeat: no-repeat;
             background-attachment:fixed;
-            background-size:100%;}
+            background-size:100%;
+        }
         
-        .conteudo-form{
+
+        .conteudo__form {
             width: 400px;
             padding: 40px 0px;
             background-color: rgba(255, 255, 255, 0.883);
@@ -37,8 +55,8 @@
             border: 4.5px solid red;
             border-top: 4.5px solid  green;
             border-left: 1.3px solid rgba(255, 230, 0, 0.692);
-            border-right: 1.3px solid  rgba(255, 230, 0, 0.692);}
-
+            border-right: 1.3px solid  rgba(255, 230, 0, 0.692);
+        }
 
 
         fieldset {
@@ -47,43 +65,54 @@
             border: 0.3px solid rgb(73, 73, 73);
             padding: 30px;
             margin-bottom: 10px;
-            border-radius: 25px;}
+            border-radius: 25px;
+        }
 
 
-        input#nome ,input#email, input#telefone, input#data-nasc{
+        input#nome ,input#email, input#telefone, input#data-nasc {
             width: 280px;
             padding: 5px;
             border-radius: 5px;
             margin-bottom: 8px;
-            transition: transform 0.2s ease-out,
-            margin-bottom 0.5s ease-in;}
+            transition: 
+                transform 0.2s ease-out, 
+                margin-bottom 0.5s ease-in;
+        }
 
 
         input#maior-idade, #residencia, #estudo, #turismo {
             transform: scale(1);
-            transition: transform 0.2s ease;}
+            transition: transform 0.2s ease;
+        }
+
 
         input#maior-idade:hover, input#menor-idade:hover, #residencia:hover,#estudo:hover,
-        #turismo:hover{transform: scale(1.3);}
+        #turismo:hover {
+            transform: scale(1.3);
+        }
 
 
         input#nome:hover, input#email:hover, input#telefone:hover, input#data-nasc:hover,
-        #selecao-interesses:hover{transform: scale(1.03);}
+        #selecao-interesses:hover {
+            transform: scale(1.03);
+        }
 
 
         input#nome:focus, input#email:focus, input#telefone:focus, input#data-nasc:focus {
             outline: none;
             border: 2px solid rgb(116, 15, 136);
-            margin-bottom: 20px;}
+            margin-bottom: 20px;
+        }
 
 
-        #selecao-interesses {width: 100%; padding: 5px; border-radius: 5px;}
+        #selecao-interesses {
+            width: 280px; 
+            padding: 5px; 
+            border-radius: 5px;
+        }
 
-        #selecao-interesses{width: 280px;}
 
-
-
-        .botoes__fundo{
+        .botoes__fundo {
             margin: 0px auto 0px;
             width: 230px;
             right: auto;
@@ -94,41 +123,49 @@
             border-style: solid;         
             border-width: 0.6px;
             border-radius: 30px;
-            padding: 8px;}
+            padding: 8px;
+        }
 
-        .botoes__fundo__submit{
+
+        .botoes__fundo__submit {
             text-decoration-line: none;
             padding: 10px 30px;
             background-color: blue;
             border-radius: 20px;
             color: white;
             transition:
-            background-color, 0.5s,
-            color, 0.5s;
+                background-color, 0.5s,
+                color, 0.5s;
             margin-left: 10px;
-            font-weight: bold;}
+            font-weight: bold;
+        }
 
-        .botoes__fundo__reset{
+
+        .botoes__fundo__reset {
             text-decoration-line: none;
             padding: 10px 30px;
             background-color: rgb(194, 194, 194);
             border-radius: 20px;
             color: black;
             transition:
-            background-color, 0.3s,
-            color, 0.3s;
+                background-color, 0.3s,
+                color, 0.3s;
             margin-left: 10px;
-            font-weight: bold;}
+            font-weight: bold;
+        }
+
 
         .botoes__fundo__submit:hover {
             background-color: red;
-            transform: scale(1.2);}
+            transform: scale(1.2);
+        }
     
+
         .botoes__fundo__reset:hover {
             background-color: red;
             color: white;
-            transform: scale(1.2);}
-
+            transform: scale(1.2);
+        }
 
 
         .cidade {
@@ -136,53 +173,80 @@
             justify-content: center;
             margin-bottom: 15px;
             line-height: 30px;
-            font-size: 30pt;}
+            font-size: 30pt;
+        }
             
-        .s, .a, .l, .v, .a2, .d, .o, .r{
+        .s, .a, .l, .v, .a2, .d, .o, .r {
             font-family: 'Road Rage', cursive;
             width: 20px;
-            font-size: 40pt;}
+            font-size: 40pt;
+        }
+
+
+        @keyframes fadeInfadeOut {
+            0% {
+                opacity: 1;
+            } 
+            
+            50% {
+                opacity: 0.2;
+            } 
+            
+            100% {
+                opacity: 1;
+            }
+        }
 
 
         .s {
             color:  red;
             text-shadow: 0.1em 0.1em rgba(212, 10, 20, 0.555);
             animation: fadeInfadeOut 10s linear infinite;
-            animation: fadeInfadeOut 3s ease infinite;}
+            animation: fadeInfadeOut 3s ease infinite;
+        }
 
-        @keyframes fadeInfadeOut {0% {opacity: 1;} 50% {opacity: 0.2;} 100% {opacity: 1;}}
 
-        .a{
+        .a {
             color:  blue;
             text-shadow: 0.1em 0.1em rgba(10, 47, 212, 0.575); 
             animation: fadeInfadeOut 9s linear infinite;
-            animation: fadeInfadeOut 5s ease infinite;}
+            animation: fadeInfadeOut 5s ease infinite;
+        }
+
 
         .l {
             color: green;
             text-shadow: 0.1em 0.1em rgba(10, 212, 77, 0.602);
             animation: fadeInfadeOut 8s linear infinite;
-            animation: fadeInfadeOut 4s ease infinite;}
+            animation: fadeInfadeOut 4s ease infinite;
+        }
 
-        .v{
+
+        .v {
             color:  rgb(199, 199, 1);
             text-shadow: 0.1em 0.1em rgba(236, 224, 92, 0.64); 
             animation: fadeInfadeOut 7s linear infinite;
             animation: fadeInfadeOut 7s ease infinite; 
             }
 
+
         .a2 {
             color: blue;
             text-shadow: 0.1em 0.1em rgba(10, 57, 212, 0.602);
-            animation: fadeInfadeOut 8s ease infinite;}
+            animation: fadeInfadeOut 8s linear infinite;
+            animation: fadeInfadeOut 8s ease infinite;
+        }
+
 
         .d {
             color: red;
             text-shadow: 0.1em 0.1em rgba(212, 10, 87, 0.554);
             animation: fadeInfadeOut 5s linear infinite;
-            animation: fadeInfadeOut 4s ease infinite;}
+            animation: fadeInfadeOut 4s ease infinite;
+        }
 
-        .o{
+
+        .o {
             color:rgb(199, 199, 1);
             text-shadow: 0.1em 0.1em rgba(223, 221, 98, 0.527);
             animation: fadeInfadeOut 4s linear infinite;
@@ -193,10 +257,28 @@
             color: purple;
             text-shadow: 0.1em 0.1em rgba(195, 10, 212, 0.657);
             animation: fadeInfadeOut 3s linear infinite;
-            animation: fadeInfadeOut 2s ease infinite;}
+            animation: fadeInfadeOut 2s ease infinite; 
+        }
 
 
-        .img:hover {animation-play-state: paused;}
+        .img:hover {
+            animation-play-state: paused;
+        }
+
+
+        @keyframes position {
+            0% {
+                top: 0;
+                left: 0;
+            }
+            
+            100% {
+                top: 0;
+                left: calc(21% - 100px);
+            }
+
+        }
+
 
         .img {
             margin-top: 20px;    
@@ -208,22 +290,16 @@
             height: 60px;
             position: absolute;
             animation: position 0.2s linear infinite;
-            animation-direction: alternate;}
+            animation-direction: alternate;
+        }
 
-        @keyframes position{
-            0% {top: 0;
-                left: 0;}
-            100% {top: 0;
-                left: calc(21% - 100px);}
-
-            }
         
     </style>
-    <title>Formulário</title>
 </head>
 
 <body>
-    <div class="conteudo-form">
+
+    <div class="conteudo__form">
 
         <form action="" method="post">
             <div class="cidade">
@@ -237,6 +313,7 @@
                 <div class="r">R</div>
                 <img class="img"src="../front_checkpoint2/img/imagem_2021-11-27_203832-removebg-preview.png">
             </div>
+            
             <fieldset>
                 <legend>Dados Pessoais:</legend>
                 <div class="nome">
@@ -260,8 +337,8 @@
                 </div>
 
                 <div class="maior-idade">
-                    <input type="radio" id="maior-idade" name="maior-idade" value="maior-idade">
-                    <label for="maior-idade">Maior de idade</label>
+                   <input type="radio" id="maior-idade" name="maior-idade" value="maior-idade">
+                   <label for="maior-idade">Maior de idade</label>
                 </div>
 
                 <div class="menor-idade">
@@ -274,21 +351,20 @@
                 <legend>Interesses:</legend>
 
                 <div class="selecao-interesses">
-                    <label for="nome">Interesses Turísticos</label>
+                    <label for="selecao-interesses">Interesses Turísticos</label> 
                     <select name="selecao-interesses" id="selecao-interesses">
                         <optgroup label="Centro-Histórico">
-                            <option value="">Cruz caída</option>
-                            <option value="">Pelourinho</option>
-                            <option value="">Praça Tereza Batista</option>
+                            <option value="cruzCaida">Cruz caída</option>
+                            <option value="pelourinho">Pelourinho</option>
+                            <option value="pcTerezaBatista">Praça Tereza Batista</option>
                         </optgroup>
-
                         <optgroup label="Circuitos do Carnaval">
-                            <option value="">Barra-Ondina(Dodô)</option>
-                            <option value="">Pelourinho(Batatinha)</option>
-                            <option value="">Centro(Osmar)</option>
+                            <option value="barraOndina">Barra-Ondina(Dodô)</option>
+                            <option value="batatinha">Pelourinho(Batatinha)</option>
+                            <option value="centro">Centro(Osmar)</option>
                         </optgroup>
                     </select>
-
+                    
                     <p class="interesses-pessoais">Interesses Pessoais:</p>
 
                     <div class="interesses-pessoais">
