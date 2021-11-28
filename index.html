@@ -24,22 +24,28 @@
         }
 
         body {
-            background: url(./img/bgform.png);
-            font-size: 13pt;
-        }
+        background: url(./img/bgform.png);
+        font-size: 13pt;
+        background-repeat: no-repeat;
+        background-attachment:fixed;
+        background-size:100%;}
+        
         .conteudo-form{
             width: 400px;
-            padding: 20px 0px;
-            background-color:rgb(255, 255, 255);
+            padding: 40px 0px;
+            background-color: white;
             border-radius: 40px;
             margin: 0 auto;
             position: relative;
-            border: 5px solid rgba(5, 2, 53, 0.72);
+            border: 4.5px solid red;
+            border-top: 4.5px solid  green;
+            border-left: 1.3px solid rgba(255, 230, 0, 0.692);
+            border-right: 1.3px solid  rgba(255, 230, 0, 0.692);
         }
 
 
         fieldset {
-            width: 70%;
+            width: 300px;
             margin: 0 auto;
             border: 0.3px solid rgb(73, 73, 73);
             padding: 30px;
@@ -276,28 +282,28 @@
 
 
         .img {
-            margin-top: 380px;
+           
+             margin-top: 20px;
             /* margin-bottom: 440px; */
-
-            margin-left: 45px;
-            margin-right: 400px;
-            width: 70px;
-            height: 70px;
+            
+            animation:  0.1s;
+            animation-iteration-count: 3;
+            margin-left: 10px;
+            margin-right: 10px;
+            width: auto;
+            height: 60px;
+            
             /* vertical-align: top; */
             position: absolute;
-            animation: position 4s linear infinite;
-            animation-direction: alternate;
-        }
+            animation: position 0.2s linear infinite;
+            animation-direction: alternate;}
 
-        @keyframes position {
-            0% {
-                top: 0;
-                left: 0;
-            }
+        @keyframes position{
+            0% {top: 0;
+                left: 0;}
+            100% {top: 0;
+                left: calc(21% - 100px);}
 
-            100% {
-                top: 0;
-                left: calc(100% - 100px);
             }
 
             /*
@@ -307,7 +313,7 @@
                 left: 0;}
                 100% { top: 0;
                 left: 0;}*/
-        }
+        
     </style>
     <title>Formulário</title>
 </head>
@@ -326,7 +332,7 @@
                 <div class="o">O</div>
                 <div class="r">R</div>
                 <img class="img"
-                    src="https://i0.wp.com/www.maosaoauto.com.br/wp-content/uploads/2015/11/car-294491_1280.png?ssl=1">
+                    src="../front_checkpoint2/img/imagem_2021-11-27_203832-removebg-preview.png">
             </div>
             <fieldset>
                 <legend>Dados Pessoais:</legend>
